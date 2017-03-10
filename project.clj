@@ -1,4 +1,4 @@
-(defproject http-kit "2.2.0"
+(defproject org.curbside.http-kit "2.2.0+sni"
   :author "Feng Shen (@shenfeng)"
   :description "High-performance event-driven HTTP client/server for Clojure"
   :url "http://http-kit.org/"
@@ -30,6 +30,8 @@
    :travis  (complement #(or (:benchmark %) (:skip-travis %)))
    :benchmark :benchmark
    :all (fn [_] true)}
+
+  :repositories [["clojars" {:sign-releases false}]]
 
   :profiles
   {:test {:java-source-paths ["test/java" "src/java"]
